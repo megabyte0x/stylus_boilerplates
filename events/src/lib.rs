@@ -20,7 +20,7 @@ sol_storage! {
 
 #[public]
 impl Events {
-    pub fn user_main(&self) -> U256 {
+    pub fn user_main(&self) {
         // emits a 'Log' event, defined above in the sol! macro
         stylus_core::log(
             self.vm(),
@@ -29,7 +29,6 @@ impl Events {
                 message: "Hello world!".to_string(),
             },
         );
-        U256::from(200)
         // no data, but event will still log to the chain
         stylus_core::log(self.vm(), AnotherLog {});
 
