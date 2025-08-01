@@ -2,3 +2,5 @@ target
 .env
 deploy_output.txt
 address.json
+examples
+header.png
